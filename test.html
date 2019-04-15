@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+
+    <div id="id1"></div>
+
+    <script type="text/babel">
+    ReactDOM.render(
+        <h1>내 버스 찾기</h1>, document.getElementById('id1')
+        );
+    </script>
+
+<!--  -->
+    <div id="id2"></div>
+
+  <script type="text/babel">
+  const name = '호서대학교';
+      ReactDOM.render(
+        <h1>이 버스는 {name} 버스입니다.</h1>, document.getElementById('id2')
+        );
+      </script>
+
+<!--  -->
+
+      <div id="id3"></div>
+
+      <script type="text/babel">
+        function Welcome(){
+          return <h1>함수를 이용한 방식</h1>;
+        }
+
+        ReactDOM.render(<Welcome />, document.getElementById('id3'));
+      </script>
+
+<!--  -->
+
+<div id="id4"></div>
+
+<script type="text/babel">
+
+  class Welcome2 extends React.Component{
+    render(){
+      return(<h1>extends 방식입니다</h1>);
+    }
+  }
+
+  ReactDOM.render(<Welcome2 />, document.getElementById('id4'));
+</script>
+
+<!--  -->
+
+<div id='id5'></div>
+
+<script type="text/babel">
+  function Welcome3(props){
+    return <h1>버스 번호는 {props.number} 입니다.</h1>;
+  }
+
+  ReactDOM.render(<Welcome3 number = '1234' />, document.getElementById('id5'));
+
+</script>
+<!--  -->
+
+
+
+
+  </body>
+</html>
